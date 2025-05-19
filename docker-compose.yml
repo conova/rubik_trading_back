@@ -1,0 +1,30 @@
+version: '2'
+services:
+  node-app:
+    container_name: rubik_trading_node_app_ts
+    build: .
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgresql
+    command: npm run dev
+
+  postgresql:
+    container_name: rubik_trading_postgresql_ts
+    hostname: postgresql
+    image: postgres:14.4-alpine
+    restart: on-failure
+    environment:
+      POSTGRES_USER: ${POSTGRESQL_USER}
+      POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD}
+      POSTGRES_DATABASE: ${POSTGRESQL_DATABASE}
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+  postgres:

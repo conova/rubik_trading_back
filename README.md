@@ -1,4 +1,4 @@
-# RESTful API Node adventure Template
+# RESTful API Node Rubik Trading Back-End system
 
 > A adventure template/starter project for quickly building RESTful APIs using Node.js, Express, and PostreSQL with Prisma.
 

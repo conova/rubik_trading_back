@@ -22,6 +22,9 @@ if (error) {
 }
 
 export default {
+    CORE_API_BASE_URL: envVars.CORE_API_BASE_URL,
+    CORE_API_PATH: envVars.CORE_API_PATH,
+    CORE_API_KEY: envVars.CORE_API_KEY,
     env: envVars.NODE_ENV,
     port: envVars.PORT,
 };

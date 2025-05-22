@@ -11,7 +11,7 @@ const homeAction = catchAsync(async (req: Request, res: Response) => {
 const healthCheck = catchAsync(async (req: Request, res: Response) => {
     res.send({
         code: 0,
-        response: 'Working',
+        response: 'Working'
     });
 });
 
